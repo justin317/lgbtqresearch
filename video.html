@@ -1,0 +1,50 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <meta name="theme-color" content="#fafafa">
+  <script
+  src="https://code.jquery.com/jquery-1.6.4.min.js"
+  integrity="sha256-lR1rrjnrFy9XqIvWhvepIc8GD9IfWWSPDSC2qPmPxaU="
+  crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function () {
+      var counter = 10;
+      var id = setInterval(function() {
+         counter--;
+         if(counter > 0) {
+              var msg = 'You can download the file in ' + counter + ' seconds';
+              $('#notice').text(msg);
+         } else {
+              $('#next').show();
+              clearInterval(id);
+        }
+      }, 3000);
+  });
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="center">Educational Training Video <small>(Page 2/3)</small></h1>
+    <div class="video-container">
+      <iframe width="853" height="480" src="https://www.youtube.com/embed/NUhvJgxgAac" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <p class="center"><a href="LGBTQ_Resource_Handout.pdf" class="pdf" target="_blank">Please Download Our LGBTQ Resource Handout Here</a></p>
+    <p class="center"><a href="post.html" class="button" id="next" style="display: none">Continue to Post-Education Survey After Completing Video</a></p>
+  </div>
+</body>
+
+</html>
